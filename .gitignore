@@ -1,0 +1,10 @@
+# base
+node_modules
+.DS_Store
+*.local
+
+# dist
+dist
+
+# synbol
+public/assets

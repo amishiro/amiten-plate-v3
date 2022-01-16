@@ -1,0 +1,28 @@
+# EditorConfig: http://editorconfig.org/
+
+# EditorConfigは、異なるエディタ・IDE間でも一貫したコーディングスタイルを定義、維持するツールです。
+# 各種エディタに以下をインストールしてください。
+# - VScode: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+# - atom: https://atom.io/packages/editorconfig
+# - Sublime: https://packagecontrol.io/packages/EditorConfig
+
+# ------------ 設定 ------------#
+
+# プロジェクトで以下の設定を利用するか指定します。※falseの場合は、プロジェクトから遡って見つかったファイルを利用します。
+root = true
+
+# 以下はファイルごとに改行をつけたUnixスタイルの設定です。
+[*]
+end_of_line = lf
+trim_trailing_whitespace = true
+
+# 基本エンコードはutf-8
+charset = utf-8
+
+# タブはtab利用、サイズは小さめ。
+indent_style = space
+indent_size = 2
+
+# Markdownファイル用の設定。その他、拡張子ごとに指定することができます。
+[*.md]
+trim_trailing_whitespace = false

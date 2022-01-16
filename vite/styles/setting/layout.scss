@@ -1,0 +1,26 @@
+#app {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+
+  > header {
+    grid-area: header;
+    padding: clamp(1.6rem, 2vw, 1.8rem) 4vw;
+    border-bottom: 1px solid #eee;
+  }
+
+  > main {
+    grid-area: main;
+    padding: clamp(1.6rem, 2vw, 1.8rem) 4vw;
+  }
+
+  > footer {
+    grid-area: footer;
+    padding: clamp(1.6rem, 2vw, 1.8rem) 4vw;
+    border-top: 1px solid #eee;
+  }
+}

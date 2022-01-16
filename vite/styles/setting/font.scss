@@ -1,0 +1,11 @@
+// フォントの指定
+
+html {
+  font-size: 62.5%; // remベースサイズ設定 1px = 0.1rem
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.6rem; // clamp()未対応ブラウザのフォールバック
+  font-size: clamp(1.4rem, px-to-vw(16px, 385px), 1.6rem);
+}
