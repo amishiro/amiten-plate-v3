@@ -28,7 +28,6 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@storybook/addon-postcss": "^2.0.0",
     "body-scroll-lock": "^4.0.0-beta.0",
     "sanitize.css": "^13.0.0",
     "vue": "^3.2.26",
@@ -40,6 +39,7 @@
     "@storybook/addon-actions": "^6.5.0-alpha.18",
     "@storybook/addon-essentials": "^6.5.0-alpha.18",
     "@storybook/addon-links": "^6.5.0-alpha.18",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/vue3": "^6.5.0-alpha.18",
     "@vitejs/plugin-vue": "^2.0.1",
     "@vue/compiler-sfc": "^3.2.27",
