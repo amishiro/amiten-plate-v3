@@ -1,6 +1,15 @@
 {
-  "name": "my-php-project",
+  "name": "amiten-plage-v3",
+  "description": "for all",
   "version": "0.0.0",
+  "bugs": {
+    "email": "amishiro@amiten.co.jp"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "masato amishiro",
+    "email": "amishiro@amiten.co.jp"
+  },
   "scripts": {
     "dev": "npm run dev:link-assets & npm run dev:vite & npm run dev:server",
     "dev:link-assets": "ln -nfs ../vite/assets ./public/assets",
