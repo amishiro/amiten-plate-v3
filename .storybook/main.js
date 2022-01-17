@@ -20,4 +20,18 @@ module.exports = {
   core: {
     builder: 'storybook-builder-vite',
   },
+  async viteFinal(config) {
+    return {
+      ...config,
+      // ↓ viteで指定したscssの共通変数とmixinをstorybookでも読み込み
+      css: {
+        ...config.css,
+        preprocessorOptions: {
+          scss: {
+            additionalData: `@import "./vite/styles/variables.scss";@import "./vite/styles/mixins.scss";`,
+          },
+        },
+      },
+    }
+  },
 }
