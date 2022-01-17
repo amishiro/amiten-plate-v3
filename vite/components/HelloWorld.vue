@@ -25,14 +25,14 @@
   </p>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { reactive } from 'vue'
 
-defineProps({
-  msg: {
-    type: String,
-    default: 'メッセージ',
-  },
+interface Props {
+  msg?: string
+}
+withDefaults(defineProps<Props>(), {
+  msg: 'message',
 })
 
 const state = reactive({ count: 0 })

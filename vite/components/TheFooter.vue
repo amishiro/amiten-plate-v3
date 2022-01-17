@@ -9,12 +9,12 @@
   </component>
 </template>
 
-<script setup>
-defineProps({
-  tag: {
-    type: String,
-    default: 'footer',
-  },
+<script setup lang="ts">
+interface Props {
+  tag?: string
+}
+withDefaults(defineProps<Props>(), {
+  tag: 'footer',
 })
 </script>
 

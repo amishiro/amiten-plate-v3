@@ -33,11 +33,11 @@ PHPアプリの本番設置先のディレクトリ構成に合わせて指定�
 
 eslint及びvscodeの設定は[こちら](https://vueschool.io/articles/vuejs-tutorials/eslint-and-prettier-with-vite-and-vue-js-3/)を参考に、以下を修正して利用しています。
 
-変更箇所：
+変更箇所：volarとtypescriptを入れてます。
 
 - [volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)、[Vue VSCode Snippets](https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets)、[Vue 3 Snippets](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)を追加しています。
 
-※vscode機能拡張の[vetur](https://vuejs.github.io/vetur/)は、vue3へ対応していないため、[volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)を利用します。共存できない的な記事がありますが、2022/1/15時点では問題なく共存できています。
+※vscode機能拡張の[vetur](https://vuejs.github.io/vetur/)は、vue3へ対応していないため、[volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)を利用します。typescriptを利用する場合は、共存できないので`vetur`を無効（ワークスペース）にしてください。
 
 - volarのtsチェックにて、JSXはを`@types/react`優先するため、classなどがエラーになる。詳しくは(ここ)[https://github.com/johnsoncodehk/volar/discussions/592]。
 - 仮の対応として、(ここ)[https://github.com/johnsoncodehk/volar/discussions/592#discussioncomment-1763880]を参照してダミーの@types/reactを入れています。
