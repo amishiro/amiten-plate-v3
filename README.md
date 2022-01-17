@@ -97,13 +97,18 @@ font-size: clamp(1.4rem, px-to-vw(16px, 385px), 1.6rem);
 - 固定レイアウトパーツには、`vw`、また、計算が大変な場合は、`px-to-vw($px, $design-comp-viewport)`を利用します。
 - 固定レイアウトパーツに制限を設けたい場合は、`clamp()`を利用します。例：`width: clamp(10rem, px-to-vw(100, 385), 20rem);`
 
-#### 5) element
+#### 5) base layout
+
+- `vite/styles/setting/layout.scss`で、指定しています。
+
+### 機能
+
+#### 1) element
 
 研究中です。
 
-#### 6) base layout
-
-- `vite/styles/setting/layout.scss`で、指定しています。
+- エレメント用の薄いラッパーコンポーネントの作成（未実装）
+- ベースエレメントをコントロールする（未実装）
 
 ### vue plugins
 
@@ -128,10 +133,11 @@ font-size: clamp(1.4rem, px-to-vw(16px, 385px), 1.6rem);
 
 ## 追加予定の機能
 
-- pjaxとGTMの連携を確認して導入する
-- 便利なコンポーネントを入れ込んでテストする
+- フォーム関連の薄いラッパーコンポーネントを追加
+- ありがちな薄いラッパーコンポーネントを追加
+- dockerで一発起動できるようにする。
+- pjaxとGTMの連携を確認して導入
 - 開発環境でもディレクトリ構成を変更できるようにする
-- distをpreviewとdistに分けてgithub action等でデプロイしやすくする
 
 ## 注意事項
 
