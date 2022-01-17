@@ -1,7 +1,7 @@
 import VueScrollTo from 'vue-scrollto'
 
 export default {
-  install: (app, options) => {
+  install: (app) => {
     app.directive('scroll-to', VueScrollTo)
   },
 }
