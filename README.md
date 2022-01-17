@@ -129,7 +129,8 @@ font-size: clamp(1.4rem, px-to-vw(16px, 385px), 1.6rem);
 
 [ここ](https://storybook.js.org/blog/storybook-for-vite/)を参考にしています。
 
-- postcss8を利用したいので[@storybook/addon-postcss](https://storybook.js.org/addons/@storybook/addon-postcss)をインストールしてカスタマイズしています。
+- viteに合わせ、postcss8を利用したいので[@storybook/addon-postcss](https://storybook.js.org/addons/@storybook/addon-postcss)をインストールしてカスタマイズしています。
+- viteで指定したscssの共通変数とmixinをはじめとした共通処理をstorybookでも読み込みます。
 
 ## 追加予定の機能
 
