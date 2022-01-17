@@ -27,11 +27,9 @@ PHPアプリの本番設置先のディレクトリ構成に合わせて指定�
 
 - `BASE_DIR=dirName`: プロダクション（.env.production）が実行されます。
 
-### js/eslint
+### typescript/eslint
 
-研究中です。
-
-大規模を想定していないため、typescriptやIE11などのレガシーブラウザは未対応です。
+研究中です。また、レガシーブラウザは未対応です。
 
 eslint及びvscodeの設定は[こちら](https://vueschool.io/articles/vuejs-tutorials/eslint-and-prettier-with-vite-and-vue-js-3/)を参考に、以下を修正して利用しています。
 
