@@ -1,11 +1,5 @@
 import TheMainHeader from './TheMainHeader.vue'
 
-// plugins
-// import plugins from './plugins/_index.js'
-
-// styles
-import '../styles/setting/_index.js'
-
 export default {
   title: 'Example/TheMainHeader',
   component: { TheMainHeader },

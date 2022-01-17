@@ -2,9 +2,9 @@
   <div>
     <header class="the-main-header">
       <!-- eslint-disable-next-line vue/no-v-html -->
-      <h1 v-html="title" />
+      <h1 v-html="$sanitize(title)" />
       <!-- eslint-disable-next-line vue/no-v-html -->
-      <p v-if="sub" v-html="sub" />
+      <p v-if="sub" v-html="$sanitize(sub)" />
     </header>
   </div>
 </template>
