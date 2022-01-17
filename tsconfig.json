@@ -17,5 +17,6 @@
     "vite/**/*.d.ts",
     "vite/**/*.tsx",
     "vite/**/*.vue"
-  ]
+  ],
+  "exclude": ["node_modules"]
 }
