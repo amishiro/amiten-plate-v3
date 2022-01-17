@@ -19,7 +19,7 @@
     "dist:unlink-assets": "unlink ./public/assets",
     "dist:del": "node -e 'fs.rmSync(`./dist`, {recursive:true, force:true})'",
     "dist:public-copy": "MODE=production node ./npm-script/copy.js",
-    "dist:vite-build": "vue-tsc --noEmit && MODE=production vite build",
+    "dist:vite-build": "MODE=production vite build",
     "preview": "npm run dist && npm run preview:server",
     "preview:server": "MODE=production node --es-module-specifier-resolution=node ./npm-script/php-server.mjs",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore --fix vite",
@@ -41,6 +41,7 @@
     "@storybook/addon-links": "^6.5.0-alpha.18",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/vue3": "^6.5.0-alpha.18",
+    "@types/react": "file:stub/types__react",
     "@vitejs/plugin-vue": "^2.0.1",
     "@vue/compiler-sfc": "^3.2.27",
     "autoprefixer": "^10.4.2",
@@ -65,7 +66,6 @@
     "vite-plugin-fonts": "^0.2.2",
     "vite-plugin-live-reload": "^2.1.0",
     "vite-plugin-stylelint": "^1.1.0",
-    "vue-loader": "^16.8.3",
-    "vue-tsc": "^0.30.5"
+    "vue-loader": "^16.8.3"
   }
 }

@@ -39,7 +39,10 @@ eslint及びvscodeの設定は[こちら](https://vueschool.io/articles/vuejs-tu
 
 ※vscode機能拡張の[vetur](https://vuejs.github.io/vetur/)は、vue3へ対応していないため、[volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)を利用します。共存できない的な記事がありますが、2022/1/15時点では問題なく共存できています。
 
-- volarのtsチェックにて、vueファイルのtemplateがJSX扱いになって、classなどがエラーになる。解決策、探し中。
+- volarのtsチェックにて、JSXはを`@types/react`優先するため、classなどがエラーになる。詳しくは(ここ)[https://github.com/johnsoncodehk/volar/discussions/592]。
+- 仮の対応として、(ここ)[https://github.com/johnsoncodehk/volar/discussions/592#discussioncomment-1763880]を参照してダミーの@types/reactを入れています。
+- この問題が解決するまで、`vue-tsc`による自動チェックは見送ってます。
+
 
 vscodeに、以下をインストールすると便利です。
 
