@@ -41,6 +41,7 @@
     "@storybook/addon-links": "^6.5.0-alpha.18",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/vue3": "^6.5.0-alpha.18",
+    "@types/react": "file:vite/types/types__react",
     "@vitejs/plugin-vue": "^2.0.1",
     "@vue/compiler-sfc": "^3.2.27",
     "autoprefixer": "^10.4.2",
