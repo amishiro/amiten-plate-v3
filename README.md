@@ -37,18 +37,17 @@ eslint及びvscodeの設定は[こちら](https://vueschool.io/articles/vuejs-tu
 
 変更箇所：
 
-- [volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)、[Vue VSCode Snippets](https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets)、[Vue 3 Snippets](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)を追加しています。
+- [volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)、[Vue 3 Snippets](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)を追加しています。
 > ### 知己の問題1
-> vscode機能拡張の[vetur](https://vuejs.github.io/vetur/)は、vue3へ対応していないため、[volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)を利用します。typescriptsを利用する場合は共存できませんが、使わなければ、2022/1/15時点では問題なく共存できています。
+> vscode機能拡張の[vetur](https://vuejs.github.io/vetur/)はvue3へ対応していないため、[volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)を利用します。
+> 共存できないのでveturを無効（ワークスペース）にしてください。
 
 > ### 知己の問題2
-> volarのtsチェックにて、他パッケージの影響でJSXにて@types/react優先する。そのため、classなどがエラーになる（詳しくは[ここ](https://github.com/johnsoncodehk/volar/discussions/592)）。
-> 仮の対応として、[issue comment](https://github.com/johnsoncodehk/volar/discussions/592#discussioncomment-1763880)参考にダミーの@types/reactを入れています。
+> volarは、tsチェック時に他パッケージの影響でJSXにて@types/react優先する。そのため、classなどがエラーになる（詳しくは[issue](https://github.com/johnsoncodehk/volar/discussions/592)）。
+> 一時的な対策として、[issue comment](https://github.com/johnsoncodehk/volar/discussions/592#discussioncomment-1763880)を参考にダミーの@types/reactを入れています。
 
 vscodeに、以下をインストールすると便利です。
 
-- [vetur](https://vuejs.github.io/vetur/)
-- [Vue VSCode Snippets](https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets)
 - [volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 - [Vue 3 Snippets](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)
 - [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
