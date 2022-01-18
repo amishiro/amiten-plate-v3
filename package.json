@@ -30,9 +30,9 @@
   },
   "dependencies": {
     "body-scroll-lock": "^4.0.0-beta.0",
+    "sanitize-html": "^2.6.1",
     "sanitize.css": "^13.0.0",
     "vue": "^3.2.26",
-    "vue-3-sanitize": "^0.1.4",
     "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
@@ -43,6 +43,7 @@
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/vue3": "^6.5.0-alpha.18",
     "@types/react": "file:vite/types/types__react",
+    "@types/sanitize-html": "^2.6.2",
     "@typescript-eslint/eslint-plugin": "^5.9.1",
     "@typescript-eslint/parser": "^5.9.1",
     "@vitejs/plugin-vue": "^2.0.1",
