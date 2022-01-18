@@ -9,15 +9,15 @@
   </component>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import BaseLogo from './BaseLogo.vue'
 import TheHeaderNavigation from './TheHeaderNavigation.vue'
 
-defineProps({
-  tag: {
-    type: String,
-    default: 'header',
-  },
+interface Props {
+  tag?: string
+}
+withDefaults(defineProps<Props>(), {
+  tag: 'header',
 })
 </script>
 

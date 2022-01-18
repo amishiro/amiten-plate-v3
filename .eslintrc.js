@@ -5,7 +5,11 @@ module.exports = {
     node: true,
   },
   // ↓ 基本設定
-  extends: ['plugin:vue/vue3-recommended', 'prettier'],
+  extends: [
+    'plugin:vue/vue3-recommended',
+    'prettier',
+    '@vue/typescript/recommended',
+  ],
   // ↓ 追加設定 ※基本設定項目の除外がメイン
   rules: {
     'comma-dangle': ['error', 'only-multiline'], // 末尾のセミコロンを許容する。

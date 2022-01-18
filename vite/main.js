@@ -2,7 +2,6 @@
 // docs: https://github.com/vitejs/vite/issues/4786
 // docs: https://vitejs.dev/config/#build-polyfillmodulepreload
 if (import.meta.env.MODE !== 'development') {
-  // @ts-expect-error
   import('vite/modulepreload-polyfill')
 }
 

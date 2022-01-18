@@ -1,5 +1,5 @@
-import Vue3Sanitize from 'vue-3-sanitize'
+import SanitizeHtml from './sanitize-html.js'
 import VueScrollTo from './vue-scrollto.js'
 import BodyScrollLock from './body-scroll-lock.js'
 
-export default [Vue3Sanitize, VueScrollTo, BodyScrollLock]
+export default [SanitizeHtml, VueScrollTo, BodyScrollLock]

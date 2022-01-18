@@ -27,15 +27,13 @@ PHPアプリの本番設置先のディレクトリ構成に合わせて指定�
 
 - `BASE_DIR=dirName`: プロダクション（.env.production）が実行されます。
 
-### js/eslint
+### typescript/eslint
 
-研究中です。
-
-大規模を想定していないため、typescriptやIE11などのレガシーブラウザは未対応です。
+研究中です。また、レガシーブラウザは未対応です。
 
 eslint及びvscodeの設定は[こちら](https://vueschool.io/articles/vuejs-tutorials/eslint-and-prettier-with-vite-and-vue-js-3/)を参考に、以下を修正して利用しています。
 
-変更箇所：
+変更箇所：volarとtypescriptを入れてます。
 
 - [volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)、[Vue 3 Snippets](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)を追加しています。
 > ### 知己の問題1
@@ -45,6 +43,7 @@ eslint及びvscodeの設定は[こちら](https://vueschool.io/articles/vuejs-tu
 > ### 知己の問題2
 > volarは、tsチェック時に他パッケージの影響でJSXにて@types/react優先する。そのため、classなどがエラーになる（詳しくは[issue](https://github.com/johnsoncodehk/volar/discussions/592)）。
 > 一時的な対策として、[issue comment](https://github.com/johnsoncodehk/volar/discussions/592#discussioncomment-1763880)を参考にダミーの@types/reactを入れています。
+> また、この問題が解決するまで、`vue-tsc`による自動チェックは見送ってます。
 
 vscodeに、以下をインストールすると便利です。
 
