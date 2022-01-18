@@ -1,0 +1,13 @@
+{
+  // おすすめの機能拡張
+  "recommendations": [
+    "johnsoncodehk.volar",
+    "hollowtree.vue-snippets",
+    "stylelint.vscode-stylelint",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig"
+  ],
+  // 非推奨の機能拡張
+  "unwantedRecommendations": ["octref.vetur", "sdras.vue-vscode-snippets"]
+}
