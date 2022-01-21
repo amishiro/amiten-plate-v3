@@ -8,19 +8,25 @@
   min-height: 100vh;
 
   > header {
+    @include side-margin;
+    box-sizing: border-box;
     grid-area: header;
-    padding: clamp(1.6rem, 2vw, 1.8rem) 4vw;
+    padding-top: clamp(1.6rem, 2vw, 1.8rem);
+    padding-bottom: clamp(1.6rem, 2vw, 1.8rem);
     border-bottom: 1px solid #eee;
   }
 
   > main {
+    @include side-margin;
     grid-area: main;
-    padding: clamp(1.6rem, 2vw, 1.8rem) 4vw;
   }
 
   > footer {
+    @include side-margin;
+    box-sizing: border-box;
     grid-area: footer;
-    padding: clamp(1.6rem, 2vw, 1.8rem) 4vw;
+    padding-top: clamp(1.6rem, 2vw, 1.8rem);
+    padding-bottom: clamp(1.6rem, 2vw, 1.8rem);
     border-top: 1px solid #eee;
   }
 }

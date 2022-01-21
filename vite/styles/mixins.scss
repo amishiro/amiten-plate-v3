@@ -1,7 +1,10 @@
-// scssの共通mixinを記載
+// scssの共通function/mixinを記載
 
-// pxをvwに変更する
-// 表示したいpx数と、デザインカンプのviewportも情報として渡す。
-@function px-to-vw($px, $design-comp-viewport) {
-  @return calc(1vw * $px / $design-comp-viewport * 100) ;
-}
+// functions -------------
+
+@import "./mixins/px-to-vw.scss";
+
+// mixins -------------
+
+@import "./mixins/breakpoint.scss";
+@import "./mixins/side-margin.scss";
