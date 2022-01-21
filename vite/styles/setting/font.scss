@@ -7,5 +7,5 @@ html {
 body {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1.6rem; // clamp()未対応ブラウザのフォールバック
-  font-size: clamp(1.4rem, px-to-vw(16px, 385px), 1.6rem);
+  font-size: clamp(1.4rem, px-to-vw(16px, 375px), 1.6rem);
 }

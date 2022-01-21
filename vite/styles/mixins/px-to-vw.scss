@@ -1,0 +1,5 @@
+// pxをvwに変更
+// 変換したいpxと、デザインカンプのviewportをpxで渡す
+@function px-to-vw($px, $design-comp-viewport) {
+  @return calc(1vw * $px / $design-comp-viewport * 100) ;
+}

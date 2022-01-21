@@ -84,8 +84,6 @@ font-size: clamp(1.4rem, px-to-vw(16px, 385px), 1.6rem);
 
 #### 3) viewport
 
-研究中です。
-
 - ディフォルトは`width=device-width,initial-scale=1`です。
 - 320px以下を切り捨てられるように`window.outerWidth`が320px以下の場合、viewportを固定にします。
 
@@ -97,7 +95,37 @@ font-size: clamp(1.4rem, px-to-vw(16px, 385px), 1.6rem);
 - 固定レイアウトパーツには、`vw`、また、計算が大変な場合は、`px-to-vw($px, $design-comp-viewport)`を利用します。
 - 固定レイアウトパーツに制限を設けたい場合は、`clamp()`を利用します。例：`width: clamp(10rem, px-to-vw(100, 385), 20rem);`
 
-#### 5) base layout
+#### 5) breakpoint/side margin(左右マージン)/base font size
+
+vw(固定)レイアウトを基本とし、`clamp()`で最大値・最小値を指定することで、固定レイアウトのデメリットを解消します。※デメリットとは…、例えば、表示が小さくなりすぎて文字の可読性が悪くなる、ボタンが押せなくなるなど。
+
+デザインカンプを以下仕様にて作成する前提で、ディフォルトの設定をしています。
+
+```
+// ベースフォントサイズ
+
+- mobile/tablet/desktop: 16px
+
+// デザインカンプ（アートボードサイズ）
+
+- mobile: デザインカンプ375px/左右マージン32px
+- table: デザインカンプ768px/左右マージン48px
+- desktop: デザインカンプ1440px/左右マージン94px
+
+// 各項目の該当範囲
+
+- mobile: 最小320px ← デザインカンプ375px → 最大428px
+- tablet: 最小=モバイル最大+1px ← デザインカンプ768px → 最大=デスクトップ最小 - 1px
+- desktop: 最小1024px ← デザインカンプ1440px → 最大1980px ※無限大だけど、仮で1980pxとする。
+```
+
+実際には、デザインカンプ（プロジェクト）に合わせて、以下scssファイルをカスタマイズします。
+
+- base font sizeを変更する場合: `vite/styles/setting/font.scss`
+- breakpointを変更する場合: `vite/styles/mixins/breakpoint.scss`
+- side margin(左右マージン)を変更する場合: `vite/styles/mixins/side-margin.scss`
+
+#### 6) base layout
 
 - `vite/styles/setting/layout.scss`で、指定しています。
 
