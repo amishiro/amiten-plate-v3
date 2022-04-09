@@ -67,9 +67,7 @@ export default defineConfig({
   },
 
   server: {
-    cors: true,
-    strictPort: true,
-    port: 3000,
+    host: true,
   },
 
   // https://v3.vuejs.org/guide/installation.html#with-a-bundler

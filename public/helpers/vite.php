@@ -15,7 +15,7 @@ function vite(string $entry): string
 }
 
 // 開発環境/プロダクションの判定
-// viteを起動していない（http://localhost:3000がない）場合、
+// viteを起動していない（http://vite:3000がない）場合、
 // manifest.jsonから本番用ファイルをロードするための判定関数。
 function isDev(string $entry): bool
 {
@@ -23,7 +23,7 @@ function isDev(string $entry): bool
     if ($exists !== null) {
         return $exists;
     }
-    $handle = curl_init('http://localhost:3000/' . $entry);
+    $handle = curl_init('http://vite:3000/' . $entry);
     curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($handle, CURLOPT_NOBODY, true);
 
@@ -32,6 +32,7 @@ function isDev(string $entry): bool
     curl_close($handle);
 
     return $exists = !$error;
+    // return true;
 }
 
 
@@ -58,7 +59,7 @@ function jsPreloadImports(string $entry): string
     }
 
     $res = '';
-    foreach (importsUrls($entry) as $url) {
+    foreach (importsUrls($entry)['file'] as $url) {
         $res .= '<link rel="modulepreload" href="'
             . $url
             . '">';
@@ -78,6 +79,11 @@ function cssTag(string $entry): string
         $tags .= '<link rel="stylesheet" href="'
             . $url
             . '">';
+    }
+    foreach (importsUrls($entry)['css'] as $url) {
+        $tags .= '<link rel="stylesheet" href="'
+          . $url
+          . '">';
     }
     return $tags;
 }
@@ -108,7 +114,17 @@ function importsUrls(string $entry): array
 
     if (!empty($manifest[$entry]['imports'])) {
         foreach ($manifest[$entry]['imports'] as $imports) {
-            $urls[] = BASE_URL . $manifest[$imports]['file'];
+
+            // jsを取得
+            $urls['file'][] = BASE_URL . $manifest[$imports]['file'];
+
+
+            // css あれば配列を取得
+            if (!empty($manifest[$imports]['css'])) {
+                foreach($manifest[$imports]['css'] as $cssUrl) {
+                    $urls['css'][] = BASE_URL . $cssUrl;
+                }
+            }
         }
     }
     return $urls;
