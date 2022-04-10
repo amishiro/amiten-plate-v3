@@ -2,21 +2,29 @@
 
 ## 目的
 
-PHPアプリを独自ローカルサーバー(例：http://127.0.0.1:3000 )で実行し、開発中はvite(例：http://localhost:3000 )から提供されるjs/styleを利用します。
-テンプレート（ベース）はあくまでPHPアプリでありSPAを提供しません。viteはvueファイル（SFC）コンポーネントの再利用性を高める目的で利用されます。
+PHPアプリを実行し、開発中はvite(例：http://localhost:3000 )から提供されるjs/styleを利用します。
+テンプレートはあくまでPHPアプリでありSPAを提供しません。viteはvueファイル（SFC）コンポーネントの再利用性を高める目的で利用されます。
+
+## SETTING
+
+```
+// docker-compose.ymlの以下二つの「project-name」をプロジェクに合わせて変更する。
+// ※複数コンテナを共存させるため
+
+1）container_name: php-project-name
+2）container_name: vite-project-name
+```
 
 ## QUICK START
 
 ```
-npm ci
-↓
-npm run dev
+docker-compose up -d
 ```
 
-- `npm run dev`: 開発環境を立ち上げ
+### ETC
+
 - `npm run dist`: 本番環境用ファイルをdistディレクトリへ出力
 - `npm run preview`: distディレクトリをプレビュー
-- `npm run storybook`: storybookを立ち上げ
 
 ## SETTING
 
