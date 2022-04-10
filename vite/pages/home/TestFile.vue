@@ -2,7 +2,7 @@
   <div>
     <p>Test pages component</p>
     <h2>icon test</h2>
-    <div class="material-icons">face</div>
+    <div class="material-icons">home</div>
     <div class="icon-test" />
   </div>
 </template>
@@ -11,7 +11,7 @@
 .icon-test {
   &::before {
     @include font-icon;
-    content: 'face';
+    content: 'home';
   }
 }
 </style>
