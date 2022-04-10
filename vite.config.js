@@ -45,6 +45,22 @@ export default defineConfig({
         additionalData: `@import "./vite/styles/variables.scss";@import "./vite/styles/mixins.scss";`,
       },
     },
+    // @charset関連のviteバグ回避
+    // docs: https://github.com/vitejs/vite/discussions/5079
+    postcss: {
+      plugins: [
+        {
+          postcssPlugin: 'internal:charset-removal',
+          AtRule: {
+            charset: (atRule) => {
+              if (atRule.name === 'charset') {
+                atRule.remove()
+              }
+            },
+          },
+        },
+      ],
+    },
   },
 
   // config
@@ -63,14 +79,17 @@ export default defineConfig({
     },
   },
 
+  // サーバー：docker合わせ
   server: {
     host: true,
   },
 
+  // エイリアス追加
   // https://v3.vuejs.org/guide/installation.html#with-a-bundler
   resolve: {
     alias: {
       vue: 'vue/dist/vue.esm-bundler.js',
+      '@': path.join(__dirname, './vite'),
     },
   },
 })

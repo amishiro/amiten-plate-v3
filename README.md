@@ -21,10 +21,11 @@ PHPアプリを実行し、開発中はvite(例：http://localhost:3000 )から�
 docker-compose up -d
 ```
 
-### ETC
+### ETC　COMMAND
 
 - `npm run dist`: 本番環境用ファイルをdistディレクトリへ出力
 - `npm run preview`: distディレクトリをプレビュー
+- `npm run dev:link-assets`: 開発中にassetsのエイリアス消しちゃった時のコマンド
 
 ## SETTING
 
