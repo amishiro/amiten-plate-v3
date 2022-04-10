@@ -1,3 +1,7 @@
+/**
+ * エントリポイントの共通設定
+ */
+
 // using workaround
 // docs: https://github.com/vitejs/vite/issues/4786
 // docs: https://vitejs.dev/config/#build-polyfillmodulepreload
@@ -13,17 +17,9 @@ import '/scripts/_index.js'
 
 // styles
 import './styles/setting/_index.js'
-const styles = import.meta.glob('./pages/index/**/*.scss')
-for (const path in styles) {
-  styles[path]()
-}
 
-// Vue
-import { createApp } from 'vue'
-
-// コンポーネントをロード
-const modules = import.meta.globEager('./components/**/*.vue')
-const pageModules = import.meta.globEager('./pages/index/**/*.vue')
+// components
+const components = import.meta.globEager('./components/**/*.vue')
 const importComponent = (modules) => {
   const components = {}
   for (const path in modules) {
@@ -36,20 +32,5 @@ const importComponent = (modules) => {
   }
   return components
 }
-const components = {
-  ...importComponent(modules),
-  ...importComponent(pageModules),
-}
 
-// Vueアプリをインスタンス化
-const app = createApp({
-  components,
-})
-
-// plugins追加
-for (const plugin of plugins) {
-  app.use(plugin)
-}
-
-// マウント
-app.mount('#app')
+export { plugins, components, importComponent }

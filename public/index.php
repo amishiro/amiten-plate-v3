@@ -7,7 +7,7 @@
   <?php echo $meta->title(); ?>
   <?php echo $meta->description(); ?>
   <?php echo $meta->ogp(); ?>
-  <?php echo vite('main.js'); ?>
+  <?php echo vite('home.js'); ?>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">

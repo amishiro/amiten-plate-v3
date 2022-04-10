@@ -4,10 +4,10 @@
 
 <head>
   <?php echo $meta->base(); ?>
-  <?php echo $meta->title("ページ2"); ?>
-  <?php echo $meta->description("ディスクリプション2"); ?>
+  <?php echo $meta->title('ページ2'); ?>
+  <?php echo $meta->description('ディスクリプション2'); ?>
   <?php echo $meta->ogp('home.jpg'); ?>
-  <?php echo vite('main.js') ?>
+  <?php echo vite('home.js'); ?>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">

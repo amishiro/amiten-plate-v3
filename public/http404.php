@@ -7,7 +7,7 @@
   <?php echo $meta->title('Page Not Found'); ?>
   <?php echo $meta->description('ディスクリプション2'); ?>
   <?php echo $meta->ogp(); ?>
-  <?php echo vite('main.js'); ?>
+  <?php echo vite('home.js'); ?>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">

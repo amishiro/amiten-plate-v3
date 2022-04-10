@@ -50,7 +50,6 @@ export default defineConfig({
   // config
   root: 'vite',
   base: '',
-
   build: {
     outDir: resolve(__dirname, `./dist/${baseDir}`),
     emptyOutDir: true,
@@ -58,8 +57,8 @@ export default defineConfig({
     manifest: true,
     rollupOptions: {
       input: {
-        // js/styleを分割する場合は、以下を参考に増やしていく
-        main: resolve(__dirname, './vite/main.js'),
+        // エントリポイントを増やす(js/styleを分割する)時は、以下を増やしていく
+        home: resolve(__dirname, './vite/home.js'),
       },
     },
   },
