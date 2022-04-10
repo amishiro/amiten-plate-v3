@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  php:
+    image: php:7.4.16-apache
+    container_name: php-project-name
+    volumes:
+      - ./vite:/var/www/vite
+      - ./public:/var/www/html
+      # - ./php.ini:/usr/local/etc/php/php.ini
+      # - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
+    ports:
+      - 8080:80
+    depends_on:
+      - vite
+
+  vite:
+    image: node:16.14.2
+    container_name: vite-project-name
+    working_dir: /var/local/app
+    volumes:
+      - .:/var/local/app:cached
+    environment:
+      - HOST=0.0.0.0
+    ports:
+      - 3000:3000
+    command: /bin/sh -c "npm install && npm run dev:link-assets && npm run dev:vite"

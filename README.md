@@ -2,21 +2,30 @@
 
 ## 目的
 
-PHPアプリを独自ローカルサーバー(例：http://127.0.0.1:3000 )で実行し、開発中はvite(例：http://localhost:3000 )から提供されるjs/styleを利用します。
-テンプレート（ベース）はあくまでPHPアプリでありSPAを提供しません。viteはvueファイル（SFC）コンポーネントの再利用性を高める目的で利用されます。
+PHPアプリを実行し、開発中はvite(例：http://localhost:3000 )から提供されるjs/styleを利用します。
+テンプレートはあくまでPHPアプリでありSPAを提供しません。viteはvueファイル（SFC）コンポーネントの再利用性を高める目的で利用されます。
+
+## SETTING
+
+```
+// docker-compose.ymlの以下二つの「project-name」をプロジェクに合わせて変更する。
+// ※複数コンテナを共存させるため
+
+1）container_name: php-project-name
+2）container_name: vite-project-name
+```
 
 ## QUICK START
 
 ```
-npm ci
-↓
-npm run dev
+docker-compose up -d
 ```
 
-- `npm run dev`: 開発環境を立ち上げ
+### ETC　COMMAND
+
 - `npm run dist`: 本番環境用ファイルをdistディレクトリへ出力
 - `npm run preview`: distディレクトリをプレビュー
-- `npm run storybook`: storybookを立ち上げ
+- `npm run dev:link-assets`: 開発中にassetsのエイリアス消しちゃった時のコマンド
 
 ## SETTING
 
@@ -72,15 +81,10 @@ vscodeに、以下をインストールすると便利です。
 #### 2) css font
 
 研究中です。
+大型モニターに対応するため、vwベースで指定しています。指定内容は以下を参照してください。
 
-- クラウドフォントは、[vite-plugin-fonts](https://www.npmjs.com/package/vite-plugin-fonts)を利用して読み込みます。`vite.config.js`の`defineConfig.plugins.viteFonts`でカスタマイズできます。また、ディフォルトでは、ノンブロッキング機能を無効化（ちらつき対策のため）しています。
-
-- ベースのフォントサイズは1.6rem(16px)です。
-
-```
-font-size: 1.6rem;
-font-size: clamp(1.4rem, px-to-vw(16px, 385px), 1.6rem);
-```
+- 基本設定されているフォントは、`vite/styles/setting/font.scss`を確認してください。
+- scssMixin`vite/styles/mixins/font.scss`でフォントのサイズを調整できます。
 
 #### 3) viewport
 
@@ -92,8 +96,8 @@ font-size: clamp(1.4rem, px-to-vw(16px, 385px), 1.6rem);
 研究中です。
 
 - ユーザーがベースのフォントサイズを変更できるように、px→rem利用を推奨します。remベースサイズを1px = 0.1remにします。
-- 固定レイアウトパーツには、`vw`、また、計算が大変な場合は、`px-to-vw($px, $design-comp-viewport)`を利用します。
-- 固定レイアウトパーツに制限を設けたい場合は、`clamp()`を利用します。例：`width: clamp(10rem, px-to-vw(100, 385), 20rem);`
+- 固定レイアウトパーツには、`vw`、また、計算が大変な場合は、`pw($px, $design-comp-viewport)`を利用します。
+- 固定レイアウトパーツに制限を設けたい場合は、`clamp()`を利用します。例：`width: clamp(10rem, pw(100, 385), 20rem);`
 
 #### 5) breakpoint/side margin(左右マージン)/base font size
 
@@ -152,13 +156,6 @@ vw(固定)レイアウトを基本とし、`clamp()`で最大値・最小値を�
 
 サンプルのhtaccessと404ページを格納しています。
 プロジェクト（本番環境）に合わせてカスタマイズしてください。
-
-### storybook(vue component samples)
-
-[ここ](https://storybook.js.org/blog/storybook-for-vite/)を参考にしています。
-
-- viteに合わせ、postcss8を利用したいので[@storybook/addon-postcss](https://storybook.js.org/addons/@storybook/addon-postcss)をインストールしてカスタマイズしています。
-- viteで指定したscssの共通変数とmixinをはじめとした共通処理をstorybookでも読み込みます。
 
 ## 追加予定の機能
 

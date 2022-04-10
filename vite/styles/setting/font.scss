@@ -1,11 +1,20 @@
-// フォントの指定
+// import ---------------
 
+// font-gothic - font-family: 'Noto Sans JP', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+// font-mincho - font-family: 'Noto Serif JP', serif;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&display=swap');
+
+// icons
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+// フォントの指定 ---------------
 html {
   font-size: 62.5%; // remベースサイズ設定 1px = 0.1rem
 }
 
 body {
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 1.6rem; // clamp()未対応ブラウザのフォールバック
-  font-size: clamp(1.4rem, px-to-vw(16px, 375px), 1.6rem);
+  @include font-gothic;
+  font-size: max(pw(16, 1600), 1.6rem); // 16px
 }

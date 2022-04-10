@@ -1,0 +1,13 @@
+@mixin reset-button {
+  display: block;
+  width: 100%;
+  overflow: visible;
+  font-family: inherit;
+  font-size: 100%;
+  text-align: inherit;
+  text-transform: none;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  appearance: button;
+}

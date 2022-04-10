@@ -1,67 +1,145 @@
 <?php require_once __DIR__ . '/../helpers/index.php'; ?>
 <!DOCTYPE html>
-<html prefix="og:http://ogp.me/ns#" lang="ja">
+<html
+  prefix="og:http://ogp.me/ns#"
+  lang="ja"
+>
 
 <head>
   <?php echo $meta->base(); ?>
-  <?php echo $meta->title("ページ2"); ?>
-  <?php echo $meta->description("ディスクリプション2"); ?>
+  <?php echo $meta->title('ページ2'); ?>
+  <?php echo $meta->description('ディスクリプション2'); ?>
   <?php echo $meta->ogp('home.jpg'); ?>
-  <?php echo vite('main.js') ?>
+  <?php echo vite('home.js'); ?>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div id="app">
+<body
+  itemscope
+  itemtype="http://schema.org/WebPage"
+>
+  <div
+    id="app"
+    class="layout"
+  >
+    <layout-header class="layout__header"></layout-header>
 
-    <the-header></the-header>
-
-    <main>
-      <the-main-header title="HTML5 Test Page" sub="CSSでスタイリングするための、一般的なHTML要素のテストページです。"></the-main-header>
+    <layout-main class="layout__main">
+      <the-header
+        title="HTML5 Test Page"
+        sub="CSSでスタイリングするための、一般的なHTML要素のテストページです。"
+      ></the-header>
 
       <div>
         <!-- thanks : https://github.com/cbracco/html5-test-page -->
         <p>Made by <a href="http://twitter.com/cbracco">@cbracco</a>. Code on <a
-            href="http://github.com/cbracco/html5-test-page">GitHub</a>.</p>
+            href="http://github.com/cbracco/html5-test-page"
+          >GitHub</a>.</p>
       </div>
 
       <section>
         <nav>
           <ul>
             <li>
-              <h3><a href="#" v-scroll-to="'#text-elements'">text elements</a></h3>
+              <h3><a
+                  href="#"
+                  v-scroll-to="'#text-elements'"
+                >text elements</a></h3>
               <ul>
-                <li><a href="#" v-scroll-to="'#text__headings'">Headings（見出し）</a></li>
-                <li><a href="#" v-scroll-to="'#text__paragraphs'">Paragraphs（段落）</a></li>
-                <li><a href="#" v-scroll-to="'#text__blockquotes'">Blockquotes（ブロック引用）</a></li>
-                <li><a href="#" v-scroll-to="'#text__lists'">Lists（リスト）</a></li>
-                <li><a href="#" v-scroll-to="'#text__hr'">Horizontal rules（水平ルール）</a></li>
-                <li><a href="#" v-scroll-to="'#text__tables'">Tabular data（表データ）</a></li>
-                <li><a href="#" v-scroll-to="'#text__code'">Code（コード）</a></li>
-                <li><a href="#" v-scroll-to="'#text__inline'">Inline elements（インライン要素）</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#text__headings'"
+                  >Headings（見出し）</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#text__paragraphs'"
+                  >Paragraphs（段落）</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#text__blockquotes'"
+                  >Blockquotes（ブロック引用）</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#text__lists'"
+                  >Lists（リスト）</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#text__hr'"
+                  >Horizontal rules（水平ルール）</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#text__tables'"
+                  >Tabular data（表データ）</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#text__code'"
+                  >Code（コード）</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#text__inline'"
+                  >Inline elements（インライン要素）</a></li>
             </li>
           </ul>
           <ul>
             <li>
-              <h3><a href="#" v-scroll-to="'#embedded-elements'">Embedded elements</a></h3>
+              <h3><a
+                  href="#"
+                  v-scroll-to="'#embedded-elements'"
+                >Embedded elements</a></h3>
               <ul>
-                <li><a href="#" v-scroll-to="'#embedded__images'">Images（画像）</a></li>
-                <li><a href="#" v-scroll-to="'#embedded__audio'">Audio（オーディオ）</a></li>
-                <li><a href="#" v-scroll-to="'#embedded__video'">Video（動画）</a></li>
-                <li><a href="#" v-scroll-to="'#embedded__iframe'">IFrames（iFrame）</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#embedded__images'"
+                  >Images（画像）</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#embedded__audio'"
+                  >Audio（オーディオ）</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#embedded__video'"
+                  >Video（動画）</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#embedded__iframe'"
+                  >IFrames（iFrame）</a></li>
               </ul>
             </li>
           </ul>
           <ul>
             <li>
-              <h3><a href="#" v-scroll-to="'#forms-elements'">Form elements</a></h3>
+              <h3><a
+                  href="#"
+                  v-scroll-to="'#forms-elements'"
+                >Form elements</a></h3>
               <ul>
-                <li><a href="#" v-scroll-to="'#forms__input'">Input fields</a></li>
-                <li><a href="#" v-scroll-to="'#forms__select'">Select menus</a></li>
-                <li><a href="#" v-scroll-to="'#forms__checkbox'">Checkboxes</a></li>
-                <li><a href="#" v-scroll-to="'#forms__radio'">Radio buttons</a></li>
-                <li><a href="#" v-scroll-to="'#forms__textareas'">Textareas</a></li>
-                <li><a href="#" v-scroll-to="'#forms__html5'">HTML5 inputs</a></li>
-                <li><a href="#" v-scroll-to="'#forms__action'">Action buttons</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#forms__input'"
+                  >Input fields</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#forms__select'"
+                  >Select menus</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#forms__checkbox'"
+                  >Checkboxes</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#forms__radio'"
+                  >Radio buttons</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#forms__textareas'"
+                  >Textareas</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#forms__html5'"
+                  >HTML5 inputs</a></li>
+                <li><a
+                    href="#"
+                    v-scroll-to="'#forms__action'"
+                  >Action buttons</a></li>
               </ul>
             </li>
           </ul>
@@ -154,11 +232,26 @@
           <table class="u-table has-data-label">
             <caption>テーブルサンプル</caption>
             <colgroup>
-              <col span="1" style="width:30%;">
-              <col span="1" style="width:10%;">
-              <col span="1" style="width:10%;">
-              <col span="1" style="width:10%;">
-              <col span="1" style="width:auto;">
+              <col
+                span="1"
+                style="width:30%;"
+              >
+              <col
+                span="1"
+                style="width:10%;"
+              >
+              <col
+                span="1"
+                style="width:10%;"
+              >
+              <col
+                span="1"
+                style="width:10%;"
+              >
+              <col
+                span="1"
+                style="width:auto;"
+              >
             </colgroup>
             <thead>
               <tr>
@@ -278,20 +371,29 @@ p q r s t u v w x y z { | } ~
               <code>&lt;figure&gt;</code>タグ未利用です。
             </h3>
             <p>
-              <img src="img/logo.png" alt="Image alt text">
+              <img
+                src="img/logo.png"
+                alt="Image alt text"
+              >
             </p>
             <h3>
               <code>&lt;figure&gt;</code>タグのみを利用します。
             </h3>
             <figure>
-              <img src="img/logo.png" alt="Image alt text">
+              <img
+                src="img/logo.png"
+                alt="Image alt text"
+              >
             </figure>
             <h3>
               <code>&lt;figure&gt;</code>タグと、
               <code>&lt;figcaption&gt;</code>を利用します。
             </h3>
             <figure>
-              <img src="img/logo.png" alt="Image alt text">
+              <img
+                src="img/logo.png"
+                alt="Image alt text"
+              >
               <figcaption>画像のキャプションを表示</figcaption>
             </figure>
           </div>
@@ -314,7 +416,10 @@ p q r s t u v w x y z { | } ~
         <article id="embedded__iframe">
           <h2>IFrame</h2>
           <div>
-            <iframe src="./" height="300"></iframe>
+            <iframe
+              src="./"
+              height="300"
+            ></iframe>
           </div>
         </article>
 
@@ -325,39 +430,83 @@ p q r s t u v w x y z { | } ~
             <legend>Input fields</legend>
             <p>
               <label for="input__text">Text Input</label>
-              <input id="input__text" type="text" placeholder="Text Input">
+              <input
+                id="input__text"
+                type="text"
+                placeholder="Text Input"
+              >
             </p>
             <p>
               <label for="input__password">Password</label>
-              <input id="input__password" type="password" placeholder="Type your Password">
+              <input
+                id="input__password"
+                type="password"
+                placeholder="Type your Password"
+              >
             </p>
             <p>
               <label for="input__webaddress">Web Address</label>
-              <input id="input__webaddress" type="url" placeholder="http://yoursite.com">
+              <input
+                id="input__webaddress"
+                type="url"
+                placeholder="http://yoursite.com"
+              >
             </p>
             <p>
               <label for="input__emailaddress">Email Address</label>
-              <input id="input__emailaddress" type="email" placeholder="name@email.com">
+              <input
+                id="input__emailaddress"
+                type="email"
+                placeholder="name@email.com"
+              >
             </p>
             <p>
               <label for="input__phone">Phone Number</label>
-              <input id="input__phone" type="tel" placeholder="(999) 999-9999">
+              <input
+                id="input__phone"
+                type="tel"
+                placeholder="(999) 999-9999"
+              >
             </p>
             <p>
               <label for="input__search">Search</label>
-              <input id="input__search" type="search" placeholder="Enter Search Term">
+              <input
+                id="input__search"
+                type="search"
+                placeholder="Enter Search Term"
+              >
             </p>
             <p>
               <label for="input__text2">Number Input</label>
-              <input id="input__text2" type="number" placeholder="Enter a Number">
+              <input
+                id="input__text2"
+                type="number"
+                placeholder="Enter a Number"
+              >
             </p>
             <p>
-              <label for="input__text3" class="error">Error</label>
-              <input id="input__text3" class="is-error" type="text" placeholder="Text Input">
+              <label
+                for="input__text3"
+                class="error"
+              >Error</label>
+              <input
+                id="input__text3"
+                class="is-error"
+                type="text"
+                placeholder="Text Input"
+              >
             </p>
             <p>
-              <label for="input__text4" class="valid">Valid</label>
-              <input id="input__text4" class="is-valid" type="text" placeholder="Text Input">
+              <label
+                for="input__text4"
+                class="valid"
+              >Valid</label>
+              <input
+                id="input__text4"
+                class="is-valid"
+                type="text"
+                placeholder="Text Input"
+              >
             </p>
           </fieldset>
 
@@ -378,12 +527,25 @@ p q r s t u v w x y z { | } ~
           <fieldset id="forms__checkbox">
             <legend>Checkboxes</legend>
             <ul class="list list--bare">
-              <li><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked">
+              <li><label for="checkbox1"><input
+                    id="checkbox1"
+                    name="checkbox"
+                    type="checkbox"
+                    checked="checked"
+                  >
                   Choice
                   A</label></li>
-              <li><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label>
+              <li><label for="checkbox2"><input
+                    id="checkbox2"
+                    name="checkbox"
+                    type="checkbox"
+                  > Choice B</label>
               </li>
-              <li><label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label>
+              <li><label for="checkbox3"><input
+                    id="checkbox3"
+                    name="checkbox"
+                    type="checkbox"
+                  > Choice C</label>
               </li>
             </ul>
           </fieldset>
@@ -391,11 +553,27 @@ p q r s t u v w x y z { | } ~
           <fieldset id="forms__radio">
             <legend>Radio buttons</legend>
             <ul class="list list--bare">
-              <li><label for="radio1"><input id="radio1" name="radio" type="radio" class="radio" checked="checked">
+              <li><label for="radio1"><input
+                    id="radio1"
+                    name="radio"
+                    type="radio"
+                    class="radio"
+                    checked="checked"
+                  >
                   Option 1</label></li>
-              <li><label for="radio2"><input id="radio2" name="radio" type="radio" class="radio"> Option 2</label>
+              <li><label for="radio2"><input
+                    id="radio2"
+                    name="radio"
+                    type="radio"
+                    class="radio"
+                  > Option 2</label>
               </li>
-              <li><label for="radio3"><input id="radio3" name="radio" type="radio" class="radio"> Option 3</label>
+              <li><label for="radio3"><input
+                    id="radio3"
+                    name="radio"
+                    type="radio"
+                    class="radio"
+                  > Option 3</label>
               </li>
             </ul>
           </fieldset>
@@ -404,7 +582,12 @@ p q r s t u v w x y z { | } ~
             <legend>Textareas</legend>
             <p>
               <label for="textarea">Textarea</label>
-              <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+              <textarea
+                id="textarea"
+                rows="8"
+                cols="48"
+                placeholder="Enter your message here"
+              ></textarea>
             </p>
           </fieldset>
 
@@ -412,59 +595,109 @@ p q r s t u v w x y z { | } ~
             <legend>HTML5 inputs</legend>
             <p>
               <label for="ic">Color input</label>
-              <input type="color" id="ic" value="#000000">
+              <input
+                type="color"
+                id="ic"
+                value="#000000"
+              >
             </p>
             <p>
               <label for="in">Number input</label>
-              <input type="number" id="in" min="0" max="10" value="5">
+              <input
+                type="number"
+                id="in"
+                min="0"
+                max="10"
+                value="5"
+              >
             </p>
             <p>
               <label for="ir">Range input</label>
-              <input type="range" id="ir" value="10">
+              <input
+                type="range"
+                id="ir"
+                value="10"
+              >
             </p>
             <p>
               <label for="idd">Date input</label>
-              <input type="date" id="idd" value="1970-01-01">
+              <input
+                type="date"
+                id="idd"
+                value="1970-01-01"
+              >
             </p>
             <p>
               <label for="idm">Month input</label>
-              <input type="month" id="idm" value="1970-01">
+              <input
+                type="month"
+                id="idm"
+                value="1970-01"
+              >
             </p>
             <p>
               <label for="idw">Week input</label>
-              <input type="week" id="idw" value="1970-W01">
+              <input
+                type="week"
+                id="idw"
+                value="1970-W01"
+              >
             </p>
             <p>
               <label for="idt">Datetime input</label>
-              <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
+              <input
+                type="datetime"
+                id="idt"
+                value="1970-01-01T00:00:00Z"
+              >
             </p>
             <p>
               <label for="idtl">Datetime-local input</label>
-              <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
+              <input
+                type="datetime-local"
+                id="idtl"
+                value="1970-01-01T00:00"
+              >
             </p>
           </fieldset>
 
           <fieldset id="forms__action">
             <legend>Action buttons</legend>
             <p>
-              <input type="submit" value="<input type=submit>">
-              <input type="button" value="<input type=button>">
-              <input type="reset" value="<input type=reset>">
-              <input type="submit" value="<input disabled>" disabled>
+              <input
+                type="submit"
+                value="<input type=submit>"
+              >
+              <input
+                type="button"
+                value="<input type=button>"
+              >
+              <input
+                type="reset"
+                value="<input type=reset>"
+              >
+              <input
+                type="submit"
+                value="<input disabled>"
+                disabled
+              >
             </p>
             <p>
               <button type="submit">&lt;button type=submit&gt;</button>
               <button type="button">&lt;button type=button&gt;</button>
               <button type="reset">&lt;button type=reset&gt;</button>
-              <button type="button" disabled>&lt;button disabled&gt;</button>
+              <button
+                type="button"
+                disabled
+              >&lt;button disabled&gt;</button>
             </p>
           </fieldset>
 
         </form>
       </section>
-    </main>
+    </layout-main>
 
-    <the-footer></the-footer>
+    <layout-footer class="layout__footer"></layout-footer>
 </body>
 
 </html>

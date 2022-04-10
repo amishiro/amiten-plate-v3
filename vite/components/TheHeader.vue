@@ -1,23 +1,29 @@
 <template>
-  <component :is="tag">
-    <div class="the-header">
+  <!-- eslint-disable vue/no-v-html -->
+  <div>
+    <header class="the-header">
       <div class="the-header__inner">
-        <BaseLogo class="the-header__logo" />
-        <TheHeaderNavigation class="the-header__navigation" />
+        <component
+          :is="tag"
+          class="the-header__title"
+          v-html="$sanitize(title)"
+        />
+        <p v-if="sub" class="the-header__sub" v-html="$sanitize(sub)" />
       </div>
-    </div>
-  </component>
+    </header>
+  </div>
 </template>
 
 <script setup lang="ts">
-import BaseLogo from './BaseLogo.vue'
-import TheHeaderNavigation from './TheHeaderNavigation.vue'
-
 interface Props {
+  title: string
+  sub?: string
   tag?: string
 }
+
 withDefaults(defineProps<Props>(), {
-  tag: 'header',
+  sub: undefined,
+  tag: 'h1',
 })
 </script>
 
@@ -26,19 +32,21 @@ withDefaults(defineProps<Props>(), {
   // .the-header__inner
 
   &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: $gap 0 $gap-s $gap-m;
+    margin: $gap-m 0;
+    border-left: 4px solid $color-secondary;
   }
 
-  // .the-header__logo
+  // .the-header__title
 
-  &__logo {
+  &__title {
+    margin: 0 0 $gap;
   }
 
-  // .the-header__navigation
+  // .the-header__sub
 
-  &__navigation {
+  &__sub {
+    margin: 0;
   }
 }
 </style>

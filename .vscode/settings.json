@@ -18,10 +18,17 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[tyepscript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
   // Format HTML in PHP
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
+  "html.format.wrapAttributes": "force-expand-multiline",
 
   // ↓コードスペルチェック除外項目
   "cSpell.userWords": [
@@ -33,6 +40,7 @@
     "masato",
     "vite",
     "phpcs",
-    "scrollto"
+    "scrollto",
+    "mincho"
   ]
 }

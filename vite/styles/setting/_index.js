@@ -1,17 +1,9 @@
-/**
- * セッティング用CSS
- * 全てのエントリポイントへimportしてください。
- */
-
 // css reset
 // docs: https://csstools.github.io/sanitize.css/
 import 'sanitize.css'
 
-// css font
-// vite-plugin-fontsを利用してgoogleフォントを読み込んでいます。
-// docs: https://www.npmjs.com/package/vite-plugin-fonts
-import './font.scss'
-
-// css layout
-// サイトのベースレイアウト
-import './layout.scss'
+// settingディレクトリ以下のファイル読み込み
+const styles = import.meta.glob('./**/*.scss')
+for (const style in styles) {
+  styles[style]()
+}

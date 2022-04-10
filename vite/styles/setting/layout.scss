@@ -1,32 +1,27 @@
-#app {
+// css layout
+// サイトのベースレイアウト
+
+.layout {
   display: grid;
   grid-template-areas:
-    "header"
-    "main"
-    "footer";
+    'header'
+    'main'
+    'footer';
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 
-  > header {
-    @include side-margin;
-    box-sizing: border-box;
+  // .layout__header
+  &__header {
     grid-area: header;
-    padding-top: clamp(1.6rem, 2vw, 1.8rem);
-    padding-bottom: clamp(1.6rem, 2vw, 1.8rem);
-    border-bottom: 1px solid #eee;
   }
 
-  > main {
-    @include side-margin;
+  // .layout__main
+  &__main {
     grid-area: main;
   }
 
-  > footer {
-    @include side-margin;
-    box-sizing: border-box;
+  // .layout__footer
+  &__footer {
     grid-area: footer;
-    padding-top: clamp(1.6rem, 2vw, 1.8rem);
-    padding-bottom: clamp(1.6rem, 2vw, 1.8rem);
-    border-top: 1px solid #eee;
   }
 }

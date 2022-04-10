@@ -10,8 +10,8 @@ require_once __DIR__ . '/defines.php';
 // サイト名と共通のディスクリプション、また、メインのOGP画像を指定してください。
 require_once __DIR__ . '/meta.php';
 $meta = new MetaClass();
-$meta->siteName = "サイト名";
-$meta->siteDesc = "サイト共通のディスクリプション";
+$meta->siteName = 'サイト名';
+$meta->siteDesc = 'サイト共通のディスクリプション';
 // $meta->siteImage = "home.jpg";
 
 // 3)Viteに必要なエントリを出力

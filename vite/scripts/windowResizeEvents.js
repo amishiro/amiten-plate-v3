@@ -30,8 +30,7 @@ const resizeEvents = () => {
     () => {
       clearTimeout(timeoutId)
       timeoutId = setTimeout(() => {
-        // console.log('resize')
-        viewportController(320)
+        viewportController(375)
       }, 10)
     },
     false

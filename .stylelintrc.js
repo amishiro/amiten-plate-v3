@@ -18,5 +18,10 @@ module.exports = {
       true, // 基本はチェックする
       { ignoreTypes: ['_', 'x'] }, // チェック除外項目
     ],
+    'string-quotes': [
+      // シングルクォーテーションの設定を解除（prettierと競合するので解除）
+      'single',
+      { avoidEscape: false },
+    ],
   },
 }
