@@ -17,11 +17,13 @@
   itemscope
   itemtype="http://schema.org/WebPage"
 >
-  <div id="app">
+  <div
+    id="app"
+    class="layout"
+  >
+    <layout-header class="layout__header"></layout-header>
 
-    <the-header></the-header>
-
-    <main>
+    <layout-main class="layout__main">
       <the-main-header
         title="Page Not Found"
         sub="音速で探しましたが、お探しのページが見つかりませんでした。"
@@ -33,9 +35,9 @@
       <a href="">
         トップへ
       </a>
-    </main>
+    </layout-main>
 
-    <the-footer></the-footer>
+    <layout-footer class="layout__footer"></layout-footer>
 </body>
 
 </html>

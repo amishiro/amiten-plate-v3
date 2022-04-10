@@ -22,19 +22,3 @@
   direction: ltr;
   -webkit-font-smoothing: antialiased;
 }
-
-@mixin font-s {
-  font-size: max(pw(11, 1440), 1.1rem); // 11px
-}
-
-@mixin font-m {
-  font-size: max(pw(16, 1440), 1.6rem); // 16px
-}
-
-@mixin font-l {
-  font-size: max(pw(24, 1440), 2.4rem); // 24px
-}
-
-@mixin font-xl {
-  font-size: max(pw(36, 1440), 3.6rem); // 36px
-}

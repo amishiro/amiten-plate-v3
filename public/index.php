@@ -17,10 +17,13 @@
   itemscope
   itemtype="http://schema.org/WebPage"
 >
-  <div id="app">
-    <the-header></the-header>
+  <div
+    id="app"
+    class="layout"
+  >
+    <layout-header class="layout__header"></layout-header>
 
-    <main>
+    <layout-main class="layout__main">
       <header>
         <h1>index page</h1>
       </header>
@@ -29,9 +32,9 @@
         <hello-world msg="props-data"></hello-world>
         <test-file></test-file>
       </section>
-    </main>
+    </layout-main>
 
-    <the-footer></the-footer>
+    <layout-footer class="layout__footer"></layout-footer>
   </div>
 </body>
 

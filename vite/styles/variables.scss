@@ -3,11 +3,18 @@
 
 // -------------------- gap: グローバルガップ（すき間）の設定
 
-$gap: max(pw(8, 1440), 8rem); // gapサイズ 8pxは扱いやすい
+$gap: max(pw(8, 1440), 0.8rem); // gapサイズ 8pxは扱いやすい
 $gap-s: max(pw(16, 1440), 1.6rem); // 16px
 $gap-m: max(pw(24, 1440), 2.4rem); // 24px
 $gap-l: max(pw(40, 1440), 4rem); // 40px
 $gap-xl: max(pw(64, 1440), 6.4rem); // 64px
+
+// -------------------- font-size: グローバルフォントサイズの設定
+
+$font-s: max(pw(11, 1440), 1.1rem); // 11px
+$font-m: max(pw(16, 1440), 1.6rem); // 16px
+$font-l: max(pw(24, 1440), 2.4rem); // 24px
+$font-xl: max(pw(36, 1440), 3.6rem); // 36px
 
 // -------------------- color: グローバルカラーの設定
 

@@ -17,11 +17,13 @@
   itemscope
   itemtype="http://schema.org/WebPage"
 >
-  <div id="app">
+  <div
+    id="app"
+    class="layout"
+  >
+    <layout-header class="layout__header"></layout-header>
 
-    <the-header></the-header>
-
-    <main>
+    <layout-main class="layout__main">
       <the-main-header
         title="HTML5 Test Page"
         sub="CSSでスタイリングするための、一般的なHTML要素のテストページです。"
@@ -693,9 +695,9 @@ p q r s t u v w x y z { | } ~
 
         </form>
       </section>
-    </main>
+    </layout-main>
 
-    <the-footer></the-footer>
+    <layout-footer class="layout__footer"></layout-footer>
 </body>
 
 </html>
