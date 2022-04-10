@@ -1,19 +1,19 @@
 @mixin font-gothic() {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 @mixin font-mincho() {
-  font-family: "Noto Serif JP", serif;
+  font-family: 'Noto Serif JP', serif;
 }
 
 // material-icons
 @mixin font-icon {
   display: inline-block;
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   font-size: 24px;
   font-style: normal;
   font-weight: normal;
-  font-feature-settings: "liga"; /* Support for IE. */
+  font-feature-settings: 'liga'; /* Support for IE. */
   line-height: 1;
   text-transform: none;
   letter-spacing: normal;
@@ -21,4 +21,20 @@
   white-space: nowrap;
   direction: ltr;
   -webkit-font-smoothing: antialiased;
+}
+
+@mixin font-s {
+  font-size: max(pw(11, 1440), 1.1rem); // 11px
+}
+
+@mixin font-m {
+  font-size: max(pw(16, 1440), 1.6rem); // 16px
+}
+
+@mixin font-l {
+  font-size: max(pw(24, 1440), 2.4rem); // 24px
+}
+
+@mixin font-xl {
+  font-size: max(pw(36, 1440), 3.6rem); // 36px
 }

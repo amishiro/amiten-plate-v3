@@ -16,5 +16,5 @@ html {
 
 body {
   @include font-gothic;
-  font-size: 1.6rem;
+  font-size: max(pw(16, 1440), 1.6rem); // 16px
 }

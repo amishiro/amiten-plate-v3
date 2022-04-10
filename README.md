@@ -81,15 +81,10 @@ vscodeに、以下をインストールすると便利です。
 #### 2) css font
 
 研究中です。
+大型モニターに対応するため、vwベースで指定しています。指定内容は以下を参照してください。
 
-- クラウドフォントは、[vite-plugin-fonts](https://www.npmjs.com/package/vite-plugin-fonts)を利用して読み込みます。`vite.config.js`の`defineConfig.plugins.viteFonts`でカスタマイズできます。また、ディフォルトでは、ノンブロッキング機能を無効化（ちらつき対策のため）しています。
-
-- ベースのフォントサイズは1.6rem(16px)です。
-
-```
-font-size: 1.6rem;
-font-size: clamp(1.4rem, px-to-vw(16px, 385px), 1.6rem);
-```
+- 基本設定されているフォントは、`vite/styles/setting/font.scss`を確認してください。
+- scssMixin`vite/styles/mixins/font.scss`でフォントのサイズを調整できます。
 
 #### 3) viewport
 
@@ -101,8 +96,8 @@ font-size: clamp(1.4rem, px-to-vw(16px, 385px), 1.6rem);
 研究中です。
 
 - ユーザーがベースのフォントサイズを変更できるように、px→rem利用を推奨します。remベースサイズを1px = 0.1remにします。
-- 固定レイアウトパーツには、`vw`、また、計算が大変な場合は、`px-to-vw($px, $design-comp-viewport)`を利用します。
-- 固定レイアウトパーツに制限を設けたい場合は、`clamp()`を利用します。例：`width: clamp(10rem, px-to-vw(100, 385), 20rem);`
+- 固定レイアウトパーツには、`vw`、また、計算が大変な場合は、`pw($px, $design-comp-viewport)`を利用します。
+- 固定レイアウトパーツに制限を設けたい場合は、`clamp()`を利用します。例：`width: clamp(10rem, pw(100, 385), 20rem);`
 
 #### 5) breakpoint/side margin(左右マージン)/base font size
 

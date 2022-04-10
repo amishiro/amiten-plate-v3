@@ -2,19 +2,61 @@
 @mixin side-margin {
   // mobile: 左右マージン32px/デザインカンプ375px
   @include mobile {
-    padding-right: px-to-vw(32, 375);
-    padding-left: px-to-vw(32, 375);
+    padding-right: pw(32, 375);
+    padding-left: pw(32, 375);
   }
 
   // table: 左右マージン48px/デザインカンプ768px
   @include tablet {
-    padding-right: px-to-vw(48, 768);
-    padding-left: px-to-vw(48, 768);
+    padding-right: pw(48, 768);
+    padding-left: pw(48, 768);
   }
 
   // desktop: 左右マージン94px/デザインカンプ1440px
   @include desktop {
-    padding-right: px-to-vw(94, 1440);
-    padding-left: px-to-vw(94, 1440);
+    padding-right: pw(94, 1440);
+    padding-left: pw(94, 1440);
+  }
+
+  // desktop-l: 左右マージン188px/デザインカンプ16000px
+  @include desktop-l {
+    padding-right: pw(188, 1600);
+    padding-left: pw(188, 1600);
+  }
+}
+
+// サイドマージンを解除
+@mixin no-side-margin {
+  @include mobile {
+    margin-right: - px-to-vw(32, 375);
+    margin-left: - px-to-vw(32, 375);
+  }
+  @include tablet {
+    margin-right: - px-to-vw(48, 768);
+    margin-left: - px-to-vw(48, 768);
+  }
+  @include desktop {
+    margin-right: - px-to-vw(94, 1440);
+    margin-left: - px-to-vw(94, 1440);
+  }
+  @include desktop-l {
+    margin-right: - px-to-vw(188, 1600);
+    margin-left: - px-to-vw(188, 1600);
+  }
+}
+
+// サイドマージン左だけ解除
+@mixin no-left-side-margin {
+  @include mobile {
+    margin-left: - px-to-vw(32, 375);
+  }
+  @include tablet {
+    margin-left: - px-to-vw(48, 768);
+  }
+  @include desktop {
+    margin-left: - px-to-vw(94, 1440);
+  }
+  @include desktop-l {
+    margin-left: - px-to-vw(188, 1600);
   }
 }

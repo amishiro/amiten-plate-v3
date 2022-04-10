@@ -1,2 +1,54 @@
-// scssの共通変数を記載
-$color: red;
+@use 'sass:color';
+@import './mixins';
+
+// -------------------- gap: グローバルガップ（すき間）の設定
+
+$gap: max(pw(8, 1440), 8rem); // gapサイズ 8pxは扱いやすい
+$gap-s: max(pw(16, 1440), 1.6rem); // 16px
+$gap-m: max(pw(24, 1440), 2.4rem); // 24px
+$gap-l: max(pw(40, 1440), 4rem); // 40px
+$gap-xl: max(pw(64, 1440), 6.4rem); // 64px
+
+// -------------------- color: グローバルカラーの設定
+
+// 暗い色
+$color-dark: #3c3c48;
+$color-dark-lighten: color.scale($color-dark, $lightness: 20%);
+$color-dark-darken: color.scale($color-dark, $lightness: -20%);
+
+// 明るい色
+$color-light: #eee;
+$color-light-lighten: color.scale($color-light, $lightness: 5%);
+$color-light-darken: color.scale($color-light, $lightness: -15%);
+
+// ブランドカラー
+$color-brand: #d28f97;
+$color-brand-lighten: color.scale($color-brand, $lightness: 15%);
+$color-brand-darken: color.scale($color-brand, $lightness: -15%);
+
+// プライマリーカラー（コンバージョンなどに利用）
+$color-primary: #ffc759;
+$color-primary-lighten: color.scale($color-primary, $lightness: 15%);
+$color-primary-darken: color.scale($color-primary, $lightness: -15%);
+
+// セカンダリーカラー（背景色などに利用）
+$color-secondary: #3b5998;
+$color-secondary-lighten: color.scale($color-secondary, $lightness: 15%);
+$color-secondary-darken: color.scale($color-secondary, $lightness: -5%);
+
+// エラーメッセージ関連
+$color-info: #00529b;
+$color-info-lighten: #bde5f8;
+$color-success: #4f8a10;
+$color-success-lighten: #dff2bf;
+$color-warning: #9f6000;
+$color-warning-lighten: #feefb3;
+$color-error: #d8000c;
+$color-error-lighten: #ffbaba;
+
+// snsカラー
+$color-line: #1dcd00;
+$color-facebook: #3b5998;
+$color-twitter: #55acee;
+$color-youtube: #ec3324;
+$color-instagram: #cda98a;
