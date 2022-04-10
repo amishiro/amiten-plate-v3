@@ -2,9 +2,10 @@
 
 // functions -------------
 
-@import "./mixins/px-to-vw.scss";
+@import "./mixins/px-to-vw";
 
 // mixins -------------
 
-@import "./mixins/breakpoint.scss";
-@import "./mixins/side-margin.scss";
+@import "./mixins/font";
+@import "./mixins/breakpoint";
+@import "./mixins/side-margin";

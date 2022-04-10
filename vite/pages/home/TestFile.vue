@@ -1,3 +1,17 @@
 <template>
-  <div>Test pages component</div>
+  <div>
+    <p>Test pages component</p>
+    <h2>icon test</h2>
+    <div class="material-icons">face</div>
+    <div class="icon-test" />
+  </div>
 </template>
+
+<style lang="scss" scoped>
+.icon-test {
+  &::before {
+    @include font-icon;
+    content: 'face';
+  }
+}
+</style>

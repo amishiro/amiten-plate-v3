@@ -1,0 +1,24 @@
+@mixin font-gothic() {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+@mixin font-mincho() {
+  font-family: "Noto Serif JP", serif;
+}
+
+// material-icons
+@mixin font-icon {
+  display: inline-block;
+  font-family: "Material Icons";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-feature-settings: "liga"; /* Support for IE. */
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}

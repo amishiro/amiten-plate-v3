@@ -5,8 +5,6 @@ import vue from '@vitejs/plugin-vue'
 import liveReload from 'vite-plugin-live-reload'
 import eslintPlugin from 'vite-plugin-eslint'
 import stylelintPlugin from 'vite-plugin-stylelint'
-import viteFonts from 'vite-plugin-fonts'
-// import path from 'path'
 import { resolve } from 'path'
 import dotenv from 'dotenv'
 const envFile =
@@ -21,20 +19,6 @@ export default defineConfig({
     liveReload(['../public/**/*.*']),
     eslintPlugin(),
     stylelintPlugin(),
-    // docs: https://www.npmjs.com/package/vite-plugin-fonts
-    // vite-plugin-fontsを利用してgoogleフォントを読み込んでいます。
-    viteFonts({
-      google: {
-        families: [
-          {
-            name: 'Noto Sans JP',
-            styles: 'wght@400;700',
-            // ノンブロッキングレンダラー機能を無効にする ※ちらつき対策
-            defer: false,
-          },
-        ],
-      },
-    }),
   ],
 
   // docs: https://vitejs.dev/config/#css-preprocessoroptions
