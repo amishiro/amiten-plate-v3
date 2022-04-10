@@ -1,6 +1,9 @@
 <?php require_once __DIR__ . '/helpers/index.php'; ?>
 <!DOCTYPE html>
-<html prefix="og:http://ogp.me/ns#" lang="ja">
+<html
+  prefix="og:http://ogp.me/ns#"
+  lang="ja"
+>
 
 <head>
   <?php echo $meta->base(); ?>
@@ -10,7 +13,10 @@
   <?php echo vite('home.js'); ?>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
+<body
+  itemscope
+  itemtype="http://schema.org/WebPage"
+>
   <div id="app">
     <the-header></the-header>
 

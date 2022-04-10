@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import liveReload from 'vite-plugin-live-reload'
 import eslintPlugin from 'vite-plugin-eslint'
 import stylelintPlugin from 'vite-plugin-stylelint'
-import { resolve } from 'path'
+import { resolve, join } from 'path'
 import dotenv from 'dotenv'
 const envFile =
   process.env.MODE === 'production' ? '.env.production' : '.env.development'
@@ -59,6 +59,7 @@ export default defineConfig({
       input: {
         // エントリポイントを増やす(js/styleを分割する)時は、以下を増やしていく
         home: resolve(__dirname, './vite/home.js'),
+        http404: resolve(__dirname, './vite/http404.js'),
       },
     },
   },
@@ -73,7 +74,7 @@ export default defineConfig({
   resolve: {
     alias: {
       vue: 'vue/dist/vue.esm-bundler.js',
-      '@': path.join(__dirname, './vite'),
+      '@': join(__dirname, './vite'),
     },
   },
 })
