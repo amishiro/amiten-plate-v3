@@ -161,13 +161,6 @@ vw(固定)レイアウトを基本とし、`clamp()`で最大値・最小値を�
 サンプルのhtaccessと404ページを格納しています。
 プロジェクト（本番環境）に合わせてカスタマイズしてください。
 
-### storybook(vue component samples)
-
-[ここ](https://storybook.js.org/blog/storybook-for-vite/)を参考にしています。
-
-- viteに合わせ、postcss8を利用したいので[@storybook/addon-postcss](https://storybook.js.org/addons/@storybook/addon-postcss)をインストールしてカスタマイズしています。
-- viteで指定したscssの共通変数とmixinをはじめとした共通処理をstorybookでも読み込みます。
-
 ## 追加予定の機能
 
 - フォーム関連の薄いラッパーコンポーネントを追加

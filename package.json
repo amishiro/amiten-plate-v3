@@ -24,9 +24,7 @@
     "preview:server": "MODE=production node --es-module-specifier-resolution=node ./npm-script/php-server.mjs",
     "lint": "npm run lint:script & npm run lint:style",
     "lint:script": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --fix vite",
-    "lint:style": "stylelint --fix './vite/**/*.{css,scss,vue}'",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "lint:style": "stylelint --fix './vite/**/*.{css,scss,vue}'"
   },
   "dependencies": {
     "body-scroll-lock": "^4.0.0-beta.0",
@@ -37,11 +35,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
-    "@storybook/addon-actions": "^6.5.0-alpha.18",
-    "@storybook/addon-essentials": "^6.5.0-alpha.18",
-    "@storybook/addon-links": "^6.5.0-alpha.18",
-    "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/vue3": "^6.5.0-alpha.18",
     "@types/react": "file:vite/types/types__react",
     "@types/sanitize-html": "^2.6.2",
     "@typescript-eslint/eslint-plugin": "^5.9.1",
@@ -61,7 +54,6 @@
     "postcss": "^8.4.5",
     "prettier": "2.5.1",
     "sass": "^1.48.0",
-    "storybook-builder-vite": "^0.1.13",
     "stylelint": "^14.2.0",
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-recommended-vue": "^1.1.0",
