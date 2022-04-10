@@ -18,6 +18,9 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[php]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
   // Format HTML in PHP
   "editor.insertSpaces": true,
