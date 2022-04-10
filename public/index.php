@@ -21,6 +21,7 @@
       <section>
         <?php echo '<p class="message">PHP output here, potentially large HTML chunks</p>'; ?>
         <hello-world msg="props-data"></hello-world>
+        <test-file></test-file>
       </section>
     </main>
 
