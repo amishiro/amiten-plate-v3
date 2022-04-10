@@ -24,17 +24,21 @@
     <layout-header class="layout__header"></layout-header>
 
     <layout-main class="layout__main">
-      <the-main-header
+      <the-header
         title="Page Not Found"
         sub="音速で探しましたが、お探しのページが見つかりませんでした。"
-      ></the-main-header>
+      ></the-header>
       <p>
         お客さまがお探しのページが見つかりませんでした。URLが正しく入力されているかどうか、もう一度ご確認ください。
         <br>正しく入力してもページが表示されない場合は、ページが移動したか、もしくは掲載期間が終了し削除された可能性がございます。
       </p>
-      <a href="">
-        トップへ
-      </a>
+      <base-button
+        href=""
+        icon="reply"
+        is-outline
+      >
+        Go To Page Top
+      </base-button>
     </layout-main>
 
     <layout-footer class="layout__footer"></layout-footer>

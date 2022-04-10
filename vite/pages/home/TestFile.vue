@@ -1,15 +1,17 @@
 <template>
   <div>
     <p>Test pages component</p>
-    <h2>icon test</h2>
-    <div class="material-icons">home</div>
-    <div class="icon-test" />
-    <div class="gap-test" />
-    <div class="color-test is-darken" />
-    <div class="color-test" />
-    <div class="color-test is-lighten" />
+    <BaseButton @on-button="method()">click me!</BaseButton>
   </div>
 </template>
+
+<script setup lang="ts">
+import BaseButton from '@/components/BaseButton.vue'
+
+const method = () => {
+  alert('button click!')
+}
+</script>
 
 <style lang="scss" scoped>
 .icon-test {

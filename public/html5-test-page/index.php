@@ -24,10 +24,10 @@
     <layout-header class="layout__header"></layout-header>
 
     <layout-main class="layout__main">
-      <the-main-header
+      <the-header
         title="HTML5 Test Page"
         sub="CSSでスタイリングするための、一般的なHTML要素のテストページです。"
-      ></the-main-header>
+      ></the-header>
 
       <div>
         <!-- thanks : https://github.com/cbracco/html5-test-page -->

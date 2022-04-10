@@ -24,12 +24,30 @@
     <layout-header class="layout__header"></layout-header>
 
     <layout-main class="layout__main">
-      <header>
-        <h1>index page</h1>
-      </header>
+      <the-header
+        title="IndexPage"
+        sub="sub text dummy"
+      ></the-header>
+
       <section>
-        <?php echo '<p class="message">PHP output here, potentially large HTML chunks</p>'; ?>
-        <hello-world msg="props-data"></hello-world>
+
+        <h2>sample base component</h2>
+        <base-button href="http404.php">Go To Not found page</base-button>
+        <br>
+        <base-button
+          href="http404.php"
+          is-full
+        >is full</base-button>
+        <br>
+        <base-button
+          href="http404.php"
+          is-outline
+        >is outline</base-button>
+
+        <hr>
+
+        <h2>sample page component</h2>
+
         <test-file></test-file>
       </section>
     </layout-main>

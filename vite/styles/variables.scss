@@ -34,8 +34,8 @@ $color-brand-lighten: color.scale($color-brand, $lightness: 15%);
 $color-brand-darken: color.scale($color-brand, $lightness: -15%);
 
 // プライマリーカラー（コンバージョンなどに利用）
-$color-primary: #ffc759;
-$color-primary-lighten: color.scale($color-primary, $lightness: 15%);
+$color-primary: #ff7600;
+$color-primary-lighten: color.scale($color-primary, $lightness: 30%);
 $color-primary-darken: color.scale($color-primary, $lightness: -15%);
 
 // セカンダリーカラー（背景色などに利用）
