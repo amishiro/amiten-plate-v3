@@ -7,7 +7,7 @@
   <?php echo $meta->title(); ?>
   <?php echo $meta->description(); ?>
   <?php echo $meta->ogp(); ?>
-  <?php echo vite('main.js') ?>
+  <?php echo vite('main.js'); ?>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -19,7 +19,7 @@
         <h1>index page</h1>
       </header>
       <section>
-        <?php echo '<p class="message">PHP output here, potentially large HTML chunks</p>' ?>
+        <?php echo '<p class="message">PHP output here, potentially large HTML chunks</p>'; ?>
         <hello-world msg="props-data"></hello-world>
       </section>
     </main>

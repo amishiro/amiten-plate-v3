@@ -6,14 +6,13 @@ import liveReload from 'vite-plugin-live-reload'
 import eslintPlugin from 'vite-plugin-eslint'
 import stylelintPlugin from 'vite-plugin-stylelint'
 import viteFonts from 'vite-plugin-fonts'
-import path from 'path'
+// import path from 'path'
+import { resolve } from 'path'
 import dotenv from 'dotenv'
 const envFile =
   process.env.MODE === 'production' ? '.env.production' : '.env.development'
 dotenv.config({ path: envFile })
 const baseDir = process.env.BASE_DIR ? process.env.BASE_DIR : ''
-
-console.log(__dirname)
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -53,15 +52,14 @@ export default defineConfig({
   base: '',
 
   build: {
-    outDir: path.resolve(__dirname, `./dist/${baseDir}`),
+    outDir: resolve(__dirname, `./dist/${baseDir}`),
     emptyOutDir: true,
     assetsDir: './assets',
     manifest: true,
     rollupOptions: {
       input: {
-        main: 'main.js',
         // js/styleを分割する場合は、以下を参考に増やしていく
-        // main2: 'main2.js',
+        main: resolve(__dirname, './vite/main.js'),
       },
     },
   },
