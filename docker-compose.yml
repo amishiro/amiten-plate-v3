@@ -20,6 +20,7 @@ services:
     working_dir: /var/local/app
     volumes:
       - .:/var/local/app:cached
+      - /var/local/app/node_modules # dockerとローカルでnode_moduleの同期を解除
     environment:
       - HOST=0.0.0.0
     ports:
