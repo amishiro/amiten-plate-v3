@@ -1,12 +1,10 @@
 import phpServer from 'php-server'
 import open from 'open'
 import dotenv from 'dotenv'
-const envFile =
-  process.env.MODE === 'production' ? '.env.production' : '.env.development'
-dotenv.config({ path: envFile })
+dotenv.config({ path: `.env.${process.env.MODE}` })
 
 const mode = process.env.MODE
-const base = mode === 'production' ? `./dist` : `./public`
+const base = mode === 'production' || mode === 'staging' ? `./dist` : `./public`
 const baseDir = process.env.BASE_DIR ? process.env.BASE_DIR : ''
 
 // docs: https://www.npmjs.com/package/php-server

@@ -7,9 +7,7 @@ import eslintPlugin from 'vite-plugin-eslint'
 import stylelintPlugin from 'vite-plugin-stylelint'
 import { resolve, join } from 'path'
 import dotenv from 'dotenv'
-const envFile =
-  process.env.MODE === 'production' ? '.env.production' : '.env.development'
-dotenv.config({ path: envFile })
+dotenv.config({ path: `.env.${process.env.MODE}` })
 const baseDir = process.env.BASE_DIR ? process.env.BASE_DIR : ''
 
 // https://vitejs.dev/config/
