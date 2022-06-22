@@ -15,7 +15,7 @@ services:
       - vite
 
   vite:
-    image: node:16.14.2
+    image: node:18.4.0-alpine
     container_name: vite-project-name
     working_dir: /var/local/app
     volumes:
@@ -25,4 +25,4 @@ services:
       - HOST=0.0.0.0
     ports:
       - 3000:3000
-    command: /bin/sh -c "npm install && npm run dev:link-assets && npm run dev:vite"
+    command: /bin/sh -c "npm run docker-run"
